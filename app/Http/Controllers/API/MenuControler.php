@@ -20,7 +20,7 @@ class MenuControler extends Controller
     {
         try {
             $lastID = $this->menuRepo->lastID();
-            $newID = Helper::generateID($lastID->menu_id ?? "M-00");
+            $newID = Helper::generateID($lastID->menu_id ?? "M-00", 2);
             $data = [
                 "menu_id"   => $newID,
                 "menu_title" => $request->title,
