@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\MenuControler;
+use App\Http\Controllers\API\MenuRoleController;
 use App\Http\Controllers\API\SubmenuController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,14 @@ Route::prefix("v1")->group(function(){
 
         Route::prefix("submenu")->group(function(){
             Route::controller(SubmenuController::class)->group(function(){
+                Route::get("/", "index");
+                Route::post("/store", "store");
+                Route::put("/{id}/update", "update");
+            });
+        });
+
+        Route::prefix("menu-role")->group(function(){
+            Route::controller(MenuRoleController::class)->group(function(){
                 Route::get("/", "index");
                 Route::post("/store", "store");
                 Route::put("/{id}/update", "update");

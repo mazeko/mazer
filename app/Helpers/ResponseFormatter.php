@@ -15,7 +15,7 @@ class ResponseFormatter {
     public static function failed($status, $message, $error = "ERROR")
     {
         return [
-            "status"  => $status,
+            "status"  => $status != 0 ? $status : 500,
             "message" => $message,
             "errors"  => $error
         ];
