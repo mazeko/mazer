@@ -99,7 +99,7 @@ class MenuRoleController extends Controller
                 $this->menuRoleRepo->update($id, $data);
             
             DB::commit();
-            return response()->json(ResponseFormatter::success(201, __("Success"), $permissions), 201);
+            return response()->json(ResponseFormatter::success(200, __("Success"), $permissions), 200);
         } catch (\Throwable $e) {
             DB::rollback();
             return response()->json(ResponseFormatter::failed($e->getCode(), ERROR, $e->getMessage()),  500);       

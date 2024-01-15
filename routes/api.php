@@ -20,6 +20,7 @@ Route::prefix("v1")->group(function(){
     Route::middleware("jwt.verify")->group(function(){
         Route::prefix("menu")->group(function(){
             Route::controller(MenuControler::class)->group(function(){
+                Route::get("/access", "access");
                 Route::post("/store", "store");
                 Route::put("/{id}/update", "update");
             });

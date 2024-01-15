@@ -16,4 +16,8 @@ class MenuRole extends Model
     public function permissions(){
         return $this->hasMany(RolePermission::class, "menu_roleid", "menu_roleid");
     }
+
+    public function menu(){
+        return $this->belongsTo(Menu::class, "menu_id","menu_id");
+    }
 }

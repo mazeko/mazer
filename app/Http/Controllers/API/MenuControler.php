@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\API;
 
 use App\Helpers\Helper;
+use Illuminate\Http\Request;
 use App\Helpers\ResponseFormatter;
 use App\Repositories\API\MenuRepo;
+use Tymon\JWTAuth\Facades\JWTAuth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\MenuRequest;
 
@@ -57,6 +59,21 @@ class MenuControler extends Controller
             return response()->json(ResponseFormatter::success(201, __("Success"), $data), 201);
         } catch (\Throwable $e) {
             return response()->json(ResponseFormatter::failed(400, ERROR, $e->getMessage()), 400);       
+        }
+    }
+
+    public function access(Request $request)
+    {
+        try {
+            $user = JWTAuth::getPayload($request->bearerToken())->toArray();
+            $access = $this->menuRepo->access($user["role_id"]);
+            if(!$access){
+                return response()->json(ResponseFormatter::failed(404, NOT_FOUND, __("Data not found")), 404);
+            }
+
+            return response()->json(ResponseFormatter::success(200, __("Success"), $access), 200);
+        } catch (\Throwable $e) {
+            return response()->json(ResponseFormatter::failed($e->getCode(), ERROR, $e->getMessage()),  500);       
         }
     }
 }
