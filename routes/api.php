@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Route;
 Route::prefix("v1")->group(function(){
     Route::prefix("auth")->group(function(){
         Route::controller(AuthController::class)->group(function(){
-            Route::post("/login", "login");
+            Route::middleware("static")->group(function(){
+                Route::post("/login", "login");
+            });
 
             Route::middleware("jwt.verify")->group(function(){
                 Route::post("/logout", 'logout');
@@ -17,7 +19,7 @@ Route::prefix("v1")->group(function(){
         });
     });
 
-    Route::middleware("jwt.verify")->group(function(){
+    Route::middleware(["jwt.verify","static"])->group(function(){
         Route::prefix("menu")->group(function(){
             Route::controller(MenuControler::class)->group(function(){
                 Route::get("/access", "access");
