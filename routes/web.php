@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WEB\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get("/", function(){
+    return view("auth/login");
+});
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix("main")->group(function(){
+    Route::controller(DashboardController::class)->group(function(){
+        Route::get("dashboard","index");
+    });
+});
+
+Route::get("/error", function(){
+    return view("errors/404");
 });
