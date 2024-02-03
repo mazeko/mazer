@@ -92,3 +92,10 @@
 
     </div>
 </nav>
+
+
+@push("custom-script")
+    <script>
+        console.log("sidebar")
+    </script>
+@endpush
