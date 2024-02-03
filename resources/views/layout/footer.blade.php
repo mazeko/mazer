@@ -1,27 +1,11 @@
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="row text-muted">
-            <div class="col-6 text-start">
-                <p class="mb-0">
-                    <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>AdminKit</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a>								&copy;
-                </p>
-            </div>
-            <div class="col-6 text-end">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
-                    </li>
-                </ul>
-            </div>
+<footer>
+    <div class="footer clearfix mb-0 text-muted">
+        <div class="float-start">
+            <p>2023 &copy; Mazer</p>
+        </div>
+        <div class="float-end">
+            <p>Crafted with <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
+                by <a href="https://saugi.me">Saugi</a></p>
         </div>
     </div>
 </footer>

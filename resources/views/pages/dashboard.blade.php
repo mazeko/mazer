@@ -1,473 +1,267 @@
 @extends("layout.template")
 
 @section("content")
-<main class="content">
-	<div class="container-fluid p-0">
 
-		<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
-
-		<div class="row">
-			<div class="col-xl-6 col-xxl-5 d-flex">
-				<div class="w-100">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col mt-0">
-											<h5 class="card-title">Sales</h5>
-										</div>
-
-										<div class="col-auto">
-											<div class="stat text-primary">
-												<i class="align-middle" data-feather="truck"></i>
-											</div>
-										</div>
-									</div>
-									<h1 class="mt-1 mb-3">2.382</h1>
-									<div class="mb-0">
-										<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-										<span class="text-muted">Since last week</span>
+<div class="page-content"> 
+	<section class="row">
+		<div class="col-12 col-lg-9">
+			<div class="row">
+				<div class="col-6 col-lg-3 col-md-6">
+					<div class="card">
+						<div class="card-body px-4 py-4-5">
+							<div class="row">
+								<div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+									<div class="stats-icon purple mb-2">
+										<i class="iconly-boldShow"></i>
 									</div>
 								</div>
-							</div>
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col mt-0">
-											<h5 class="card-title">Visitors</h5>
-										</div>
-
-										<div class="col-auto">
-											<div class="stat text-primary">
-												<i class="align-middle" data-feather="users"></i>
-											</div>
-										</div>
+								<div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+									<h6 class="text-muted font-semibold">Profile Views</h6>
+									<h6 class="font-extrabold mb-0">112.000</h6>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3 col-md-6">
+					<div class="card"> 
+						<div class="card-body px-4 py-4-5">
+							<div class="row">
+								<div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+									<div class="stats-icon blue mb-2">
+										<i class="iconly-boldProfile"></i>
 									</div>
-									<h1 class="mt-1 mb-3">14.212</h1>
-									<div class="mb-0">
-										<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-										<span class="text-muted">Since last week</span>
-									</div>
+								</div>
+								<div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+									<h6 class="text-muted font-semibold">Followers</h6>
+									<h6 class="font-extrabold mb-0">183.000</h6>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col mt-0">
-											<h5 class="card-title">Earnings</h5>
-										</div>
-
-										<div class="col-auto">
-											<div class="stat text-primary">
-												<i class="align-middle" data-feather="dollar-sign"></i>
-											</div>
-										</div>
-									</div>
-									<h1 class="mt-1 mb-3">$21.300</h1>
-									<div class="mb-0">
-										<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-										<span class="text-muted">Since last week</span>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3 col-md-6">
+					<div class="card">
+						<div class="card-body px-4 py-4-5">
+							<div class="row">
+								<div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+									<div class="stats-icon green mb-2">
+										<i class="iconly-boldAdd-User"></i>
 									</div>
 								</div>
+								<div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+									<h6 class="text-muted font-semibold">Following</h6>
+									<h6 class="font-extrabold mb-0">80.000</h6>
+								</div>
 							</div>
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col mt-0">
-											<h5 class="card-title">Orders</h5>
-										</div>
-
-										<div class="col-auto">
-											<div class="stat text-primary">
-												<i class="align-middle" data-feather="shopping-cart"></i>
-											</div>
-										</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3 col-md-6">
+					<div class="card">
+						<div class="card-body px-4 py-4-5">
+							<div class="row">
+								<div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+									<div class="stats-icon red mb-2">
+										<i class="iconly-boldBookmark"></i>
 									</div>
-									<h1 class="mt-1 mb-3">64</h1>
-									<div class="mb-0">
-										<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-										<span class="text-muted">Since last week</span>
-									</div>
+								</div>
+								<div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+									<h6 class="text-muted font-semibold">Saved Post</h6>
+									<h6 class="font-extrabold mb-0">112</h6>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-xl-6 col-xxl-7">
-				<div class="card flex-fill w-100">
-					<div class="card-header">
-
-						<h5 class="card-title mb-0">Recent Movement</h5>
-					</div>
-					<div class="card-body py-3">
-						<div class="chart chart-sm">
-							<canvas id="chartjs-dashboard-line"></canvas>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header">
+							<h4>Profile Visit</h4>
+						</div>
+						<div class="card-body">
+							<div id="chart-profile-visit"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-12 col-lg-8 col-xxl-8 d-flex">
-				<div class="card flex-fill w-100">
-					<div class="card-header">
-						<h5 class="card-title mb-0">Monthly Sales</h5>
-					</div>
-					<div class="card-body d-flex w-100">
-						<div class="align-self-center chart chart-lg">
-							<canvas id="chartjs-dashboard-bar"></canvas>
+			<div class="row">
+				<div class="col-12 col-xl-4">
+					<div class="card">
+						<div class="card-header">
+							<h4>Profile Visit</h4>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-lg-4 col-xxl-4 d-flex">
-				<div class="card flex-fill w-100">
-					<div class="card-header">
-
-						<h5 class="card-title mb-0">Browser Usage</h5>
-					</div>
-					<div class="card-body d-flex">
-						<div class="align-self-center w-100">
-							<div class="py-3">
-								<div class="chart chart-xs">
-									<canvas id="chartjs-dashboard-pie"></canvas>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-7">
+									<div class="d-flex align-items-center">
+										<svg class="bi text-primary" width="32" height="32" fill="blue"
+											style="width:10px">
+											<use
+												xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+										</svg>
+										<h5 class="mb-0 ms-3">Europe</h5>
+									</div>
+								</div>
+								<div class="col-5">
+									<h5 class="mb-0 text-end">862</h5>
+								</div>
+								<div class="col-12">
+									<div id="chart-europe"></div>
 								</div>
 							</div>
-
-							<table class="table mb-0">
-								<tbody>
-									<tr>
-										<td>Chrome</td>
-										<td class="text-end">4306</td>
-									</tr>
-									<tr>
-										<td>Firefox</td>
-										<td class="text-end">3801</td>
-									</tr>
-									<tr>
-										<td>IE</td>
-										<td class="text-end">1689</td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="row">
+								<div class="col-7">
+									<div class="d-flex align-items-center">
+										<svg class="bi text-success" width="32" height="32" fill="blue"
+											style="width:10px">
+											<use
+												xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+										</svg>
+										<h5 class="mb-0 ms-3">America</h5>
+									</div>
+								</div>
+								<div class="col-5">
+									<h5 class="mb-0 text-end">375</h5>
+								</div>
+								<div class="col-12">
+									<div id="chart-america"></div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-7">
+									<div class="d-flex align-items-center">
+										<svg class="bi text-danger" width="32" height="32" fill="blue"
+											style="width:10px">
+											<use
+												xlink:href="assets/static/images/bootstrap-icons.svg#circle-fill" />
+										</svg>
+										<h5 class="mb-0 ms-3">Indonesia</h5>
+									</div>
+								</div>
+								<div class="col-5">
+									<h5 class="mb-0 text-end">1025</h5>
+								</div>
+								<div class="col-12">
+									<div id="chart-indonesia"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-12 col-lg-12 col-xxl-12 d-flex">
-				<div class="card flex-fill">
-					<div class="card-header">
-
-						<h5 class="card-title mb-0">Latest Projects</h5>
+				<div class="col-12 col-xl-8">
+					<div class="card">
+						<div class="card-header">
+							<h4>Latest Comments</h4>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-lg">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Comment</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-3">
+												<div class="d-flex align-items-center">
+													<div class="avatar avatar-md">
+														<img src="./assets/compiled/jpg/5.jpg">
+													</div>
+													<p class="font-bold ms-3 mb-0">Si Cantik</p>
+												</div>
+											</td>
+											<td class="col-auto">
+												<p class=" mb-0">Congratulations on your graduation!</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-3">
+												<div class="d-flex align-items-center">
+													<div class="avatar avatar-md">
+														<img src="./assets/compiled/jpg/2.jpg">
+													</div>
+													<p class="font-bold ms-3 mb-0">Si Ganteng</p>
+												</div>
+											</td>
+											<td class="col-auto">
+												<p class=" mb-0">Wow amazing design! Can you make another tutorial for
+													this design?</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
 					</div>
-					<table class="table table-hover my-0">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th class="d-none d-xl-table-cell">Start Date</th>
-								<th class="d-none d-xl-table-cell">End Date</th>
-								<th>Status</th>
-								<th class="d-none d-md-table-cell">Assignee</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Project Apollo</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-success">Done</span></td>
-								<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-							</tr>
-							<tr>
-								<td>Project Fireball</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-danger">Cancelled</span></td>
-								<td class="d-none d-md-table-cell">William Harris</td>
-							</tr>
-							<tr>
-								<td>Project Hades</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-success">Done</span></td>
-								<td class="d-none d-md-table-cell">Sharon Lessman</td>
-							</tr>
-							<tr>
-								<td>Project Nitro</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-warning">In progress</span></td>
-								<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-							</tr>
-							<tr>
-								<td>Project Phoenix</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-success">Done</span></td>
-								<td class="d-none d-md-table-cell">William Harris</td>
-							</tr>
-							<tr>
-								<td>Project X</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-success">Done</span></td>
-								<td class="d-none d-md-table-cell">Sharon Lessman</td>
-							</tr>
-							<tr>
-								<td>Project Romeo</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-success">Done</span></td>
-								<td class="d-none d-md-table-cell">Christina Mason</td>
-							</tr>
-							<tr>
-								<td>Project Wombat</td>
-								<td class="d-none d-xl-table-cell">01/01/2023</td>
-								<td class="d-none d-xl-table-cell">31/06/2023</td>
-								<td><span class="badge bg-warning">In progress</span></td>
-								<td class="d-none d-md-table-cell">William Harris</td>
-							</tr>
-						</tbody>
-					</table>
 				</div>
 			</div>
 		</div>
-
-	</div>
-</main>
-
-@push("custom-script")
-	<script type="module" src="{{ asset('js/pages/dashboard.js') }}"></script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
-			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
-			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
-			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
-			// Line chart
-			new Chart(document.getElementById("chartjs-dashboard-line"), {
-				type: "line",
-				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-					datasets: [{
-						label: "Sales ($)",
-						fill: true,
-						backgroundColor: gradient,
-						borderColor: window.theme.primary,
-						data: [
-							2115,
-							1562,
-							1584,
-							1892,
-							1587,
-							1923,
-							2566,
-							2448,
-							2805,
-							3438,
-							2917,
-							3327
-						]
-					}]
-				},
-				options: {
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					tooltips: {
-						intersect: false
-					},
-					hover: {
-						intersect: true
-					},
-					plugins: {
-						filler: {
-							propagate: false
-						}
-					},
-					scales: {
-						xAxes: [{
-							reverse: true,
-							gridLines: {
-								color: "rgba(0,0,0,0.0)"
-							}
-						}],
-						yAxes: [{
-							ticks: {
-								stepSize: 1000
-							},
-							display: true,
-							borderDash: [3, 3],
-							gridLines: {
-								color: "rgba(0,0,0,0.0)"
-							}
-						}]
-					}
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Pie chart
-			new Chart(document.getElementById("chartjs-dashboard-pie"), {
-				type: "pie",
-				data: {
-					labels: ["Chrome", "Firefox", "IE"],
-					datasets: [{
-						data: [4306, 3801, 1689],
-						backgroundColor: [
-							window.theme.primary,
-							window.theme.warning,
-							window.theme.danger
-						],
-						borderWidth: 5
-					}]
-				},
-				options: {
-					responsive: !window.MSInputMethodContext,
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					cutoutPercentage: 75
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Bar chart
-			new Chart(document.getElementById("chartjs-dashboard-bar"), {
-				type: "bar",
-				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-					datasets: [{
-						label: "This year",
-						backgroundColor: window.theme.primary,
-						borderColor: window.theme.primary,
-						hoverBackgroundColor: window.theme.primary,
-						hoverBorderColor: window.theme.primary,
-						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-						barPercentage: .75,
-						categoryPercentage: .5
-					}]
-				},
-				options: {
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					scales: {
-						yAxes: [{
-							gridLines: {
-								display: false
-							},
-							stacked: false,
-							ticks: {
-								stepSize: 20
-							}
-						}],
-						xAxes: [{
-							stacked: false,
-							gridLines: {
-								color: "transparent"
-							}
-						}]
-					}
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var markers = [{
-					coords: [31.230391, 121.473701],
-					name: "Shanghai"
-				},
-				{
-					coords: [28.704060, 77.102493],
-					name: "Delhi"
-				},
-				{
-					coords: [6.524379, 3.379206],
-					name: "Lagos"
-				},
-				{
-					coords: [35.689487, 139.691711],
-					name: "Tokyo"
-				},
-				{
-					coords: [23.129110, 113.264381],
-					name: "Guangzhou"
-				},
-				{
-					coords: [40.7127837, -74.0059413],
-					name: "New York"
-				},
-				{
-					coords: [34.052235, -118.243683],
-					name: "Los Angeles"
-				},
-				{
-					coords: [41.878113, -87.629799],
-					name: "Chicago"
-				},
-				{
-					coords: [51.507351, -0.127758],
-					name: "London"
-				},
-				{
-					coords: [40.416775, -3.703790],
-					name: "Madrid "
-				}
-			];
-			var map = new jsVectorMap({
-				map: "world",
-				selector: "#world_map",
-				zoomButtons: true,
-				markers: markers,
-				markerStyle: {
-					initial: {
-						r: 9,
-						strokeWidth: 7,
-						stokeOpacity: .4,
-						fill: window.theme.primary
-					},
-					hover: {
-						fill: window.theme.primary,
-						stroke: window.theme.primary
-					}
-				},
-				zoomOnScroll: false
-			});
-			window.addEventListener("resize", () => {
-				map.updateSize();
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
-			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
-			document.getElementById("datetimepicker-dashboard").flatpickr({
-				inline: true,
-				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
-				nextArrow: "<span title=\"Next month\">&raquo;</span>",
-				defaultDate: defaultDate
-			});
-		});
-	</script>
-@endpush
+		<div class="col-12 col-lg-3">
+			<div class="card">
+				<div class="card-body py-4 px-4">
+					<div class="d-flex align-items-center">
+						<div class="avatar avatar-xl">
+							<img src="./assets/compiled/jpg/1.jpg" alt="Face 1">
+						</div>
+						<div class="ms-3 name">
+							<h5 class="font-bold">John Duck</h5>
+							<h6 class="text-muted mb-0">@johnducky</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h4>Recent Messages</h4>
+				</div>
+				<div class="card-content pb-4">
+					<div class="recent-message d-flex px-4 py-3">
+						<div class="avatar avatar-lg">
+							<img src="./assets/compiled/jpg/4.jpg">
+						</div>
+						<div class="name ms-4">
+							<h5 class="mb-1">Hank Schrader</h5>
+							<h6 class="text-muted mb-0">@johnducky</h6>
+						</div>
+					</div>
+					<div class="recent-message d-flex px-4 py-3">
+						<div class="avatar avatar-lg">
+							<img src="./assets/compiled/jpg/5.jpg">
+						</div>
+						<div class="name ms-4">
+							<h5 class="mb-1">Dean Winchester</h5>
+							<h6 class="text-muted mb-0">@imdean</h6>
+						</div>
+					</div>
+					<div class="recent-message d-flex px-4 py-3">
+						<div class="avatar avatar-lg">
+							<img src="./assets/compiled/jpg/1.jpg">
+						</div>
+						<div class="name ms-4">
+							<h5 class="mb-1">John Dodol</h5>
+							<h6 class="text-muted mb-0">@dodoljohn</h6>
+						</div>
+					</div>
+					<div class="px-4">
+						<button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Start Conversation</button>
+					</div>
+				</div>
+			</div> 
+			<div class="card">
+				<div class="card-header">
+					<h4>Visitors Profile</h4>
+				</div>
+				<div class="card-body">
+					<div id="chart-visitors-profile"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 
 @endsection
