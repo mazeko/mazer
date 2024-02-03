@@ -8,6 +8,21 @@
             <li class="sidebar-header">
                 Pages
             </li>
+            <li class="sidebar-item">
+                <a data-bs-target="#dashboards" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="sliders"></i> 
+                        <span class="align-middle">Dashboards</span>
+                        <!-- <span class="align-middle">Dashboards</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <!-- <i class="align-right mr-7" data-feather="terminal"></i>  -->
+                </a>
+                <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item active"><a class='sidebar-link' href='/'>Analytics</a></li>
+                    <li class="sidebar-item"><a class='sidebar-link' href='/dashboard-ecommerce'>E-Commerce <span
+                                class="sidebar-badge badge bg-primary">Pro</span></a></li>
+                    <li class="sidebar-item"><a class='sidebar-link' href='/dashboard-crypto'>Crypto <span
+                                class="sidebar-badge badge bg-primary">Pro</span></a></li>
+                </ul>
+            </li>
 
             <li class="sidebar-item active">
                 <a class="sidebar-link" href="index.html">
