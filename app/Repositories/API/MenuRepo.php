@@ -62,9 +62,9 @@ class MenuRepo {
                                     ->whereColumn('s.submenu_id', 'menu_role.submenu_id')
                                     ->whereColumn('menu.menu_id', 'menu_role.menu_id');
                             });
-                    })->get();
+                    })->orderBy('menu.menu_id')->get();
 
-            $data =collect($result)->groupBy('menu_id')->map(function ($items) {
+            $data = collect($result)->groupBy('menu_id')->map(function ($items) {
                 return [
                     'menu_id' => $items->first()['menu_id'],
                     'menu_title' => $items->first()['menu_title'],
