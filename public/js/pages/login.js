@@ -21,7 +21,6 @@ loginForm.addEventListener("submit", function(event) {
             password: password
         }, { headers: { "MEZER-KEY" : "ZW5rdWRhdmlAZ21haWwuY29tOkthcmFuOXN1d3VuOSM=" }}).then(response => {
             const user = response.data
-            console.log(user)
             setCookie("authToken", user.data.access_token, user.data.expires_in)
             Swal.fire({
                 width:"24em",
@@ -49,7 +48,6 @@ loginForm.addEventListener("submit", function(event) {
             document.getElementById("loginBtn").disabled = false;
         });
     } else {
-        console.log("Email and password must be filled");
         document.getElementById("loginBtn").disabled = false;
     }
 });
