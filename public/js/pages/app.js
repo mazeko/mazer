@@ -1,6 +1,7 @@
 import { getCookie } from "../function.js";
 
-const bearerToken = getCookie("authToken")
+export const appKey = "ZW5rdWRhdmlAZ21haWwuY29tOkthcmFuOXN1d3VuOSM="
+export const bearerToken = getCookie("authToken")
 if(!bearerToken){
     window.location.href = '/error'; 
 }else{

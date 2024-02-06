@@ -39,66 +39,13 @@
         </div>
     </div>
     <div class="sidebar-menu">
-        <ul class="menu">
+        <ul class="menu" id="sidebar-menu">
             <li class="sidebar-title">Menu</li>
-            <li class="sidebar-item active ">
-                <a href="index.html" class='sidebar-link'>
-                    <i class="bi bi-grid-fill"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-stack"></i>
-                    <span>Components</span>
-                </a> 
-                <ul class="submenu ">
-                    <li class="submenu-item  ">
-                        <a href="component-accordion.html" class="submenu-link">Accordion</a>
-                    </li>
-                    <li class="submenu-item  ">
-                        <a href="component-alert.html" class="submenu-link">Alert</a>
-                    </li>
-                    <li class="submenu-item  ">
-                        <a href="component-badge.html" class="submenu-link">Badge</a>
-                    </li>
-                    <li class="submenu-item  ">
-                        <a href="component-breadcrumb.html" class="submenu-link">Breadcrumb</a>
-                    </li>
-                    <li class="submenu-item  ">
-                        <a href="component-button.html" class="submenu-link">Button</a>
-                    </li> 
-                </ul>
-            </li>
-            <li class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-collection-fill"></i>
-                    <span>Extra Components</span>
-                </a> 
-                <ul class="submenu ">
-                    <li class="submenu-item  ">
-                        <a href="extra-component-avatar.html" class="submenu-link">Avatar</a>
-                    </li>
-                    <li class="submenu-item  ">
-                        <a href="extra-component-divider.html" class="submenu-link">Divider</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-grid-1x2-fill"></i>
-                    <span>Layouts</span>
-                </a>
-                <ul class="submenu ">
-                    <li class="submenu-item  ">
-                        <a href="layout-default.html" class="submenu-link">Default Layout</a>
-                    </li>
-                    <li class="submenu-item  ">
-                        <a href="layout-vertical-1-column.html" class="submenu-link">1 Column</a>
-                    </li>
-                </ul>
-            </li>
         </ul>
         </div>
     </div>
 </div>
+
+@push('custom-script') 
+    <script type="module" src="{{ asset('js/template/sidebar.js') }}"></script>
+@endpush
