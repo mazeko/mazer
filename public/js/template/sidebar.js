@@ -11,8 +11,10 @@ function createMenuItem(item) {
     menuLink.classList.add("sidebar-link");
     menuIcon.className = item.menu_icon;
     menuName.textContent = item.menu_title;
-    menuLink.href = "#";
     menuLink.id = item.menu_id;
+    if(item.submenu.length === 0){
+        menuLink.href = item.menu_link;
+    }
 
     menuLink.appendChild(menuIcon);
     menuLink.appendChild(menuName);
