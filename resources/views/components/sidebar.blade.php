@@ -36,15 +36,16 @@
                 <div class="sidebar-toggler  x">
                     <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                 </div>
+            </div>
         </div>
-    </div>
-    <div class="sidebar-menu">
-        <ul class="menu" id="sidebar-menu">
-            <li class="sidebar-title">Menu</li>
-        </ul>
+        <div class="sidebar-menu">
+            <ul class="menu" id="sidebar-menu">
+                <li class="sidebar-title">Menu</li>
+            </ul>
         </div>
     </div>
 </div>
+
 
 @push('custom-script') 
     <script type="module" src="{{ asset('js/template/sidebar.js') }}"></script>

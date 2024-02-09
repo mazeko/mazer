@@ -1,6 +1,18 @@
 import '../axios.min.js'
 import { appKey, bearerToken } from "../pages/app.js";
 
+sidebar = document.getElementById("sidebar")
+sidebar.dataset.status = "open"
+document.getElementById("hamburger").addEventListener('click',function() {
+    if(sidebar.dataset.status == "open"){
+        sidebar.classList.add("inactive")
+        sidebar.dataset.status = "closed"
+    }else{
+        sidebar.classList.add("active")
+        sidebar.dataset.status = "open"
+    }
+})
+
 function createMenuItem(item) {
     const menuList = document.createElement("li");
     const menuLink = document.createElement("a");
