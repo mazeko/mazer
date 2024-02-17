@@ -1,9 +1,22 @@
+import '../axios.min.js'
 import { getCookie } from "../function.js";
 
 export const appKey = "ZW5rdWRhdmlAZ21haWwuY29tOkthcmFuOXN1d3VuOSM="
 export const bearerToken = getCookie("authToken")
 if(!bearerToken){
-    window.location.href = '/error'; 
+    window.location.href = '/'; 
 }else{
-    document.getElementsByTagName("html")[0].style.visibility = "visible";
+    axios.get("/api/v1/auth/check-token", {
+        headers: {
+            "MEZER-KEY": appKey,
+            "Authorization": `Bearer ${bearerToken}`
+        }
+    }).then(response => {
+        document.getElementsByTagName("html")[0].style.visibility = "visible";
+    }).catch(error => {
+        if(error.response.status == 401){
+            window.location.href = '/'; 
+        }
+        console.log(error.response.status)
+    })
 }

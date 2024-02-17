@@ -64,4 +64,14 @@ class AuthController extends Controller
         JWTAuth::setToken($request->bearerToken())->invalidate();
         return response()->json(ResponseFormatter::failed(200, SUCCESS, __("Succesful Logout")), 200);       
     }
+
+    public function checkToken(Request $request)
+    {
+        try {
+            $user = JWTAuth::toUser($request->bearerToken());
+            return response()->json(ResponseFormatter::success(200, __("Success"), $user), 200);
+        } catch (\Throwable $e) {
+            return response()->json(ResponseFormatter::failed(401, UNAUTHORIZED, $e->getMessage()), 401);       
+        }
+    }
 }

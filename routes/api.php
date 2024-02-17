@@ -4,6 +4,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\MenuControler;
 use App\Http\Controllers\API\MenuRoleController;
 use App\Http\Controllers\API\SubmenuController;
+use App\Http\Controllers\API\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix("v1")->group(function(){
@@ -15,6 +16,7 @@ Route::prefix("v1")->group(function(){
 
             Route::middleware("jwt.verify")->group(function(){
                 Route::post("/logout", 'logout');
+                Route::get("/check-token", 'checkToken');
             });
         });
     });
@@ -41,6 +43,12 @@ Route::prefix("v1")->group(function(){
                 Route::get("/", "index");
                 Route::post("/store", "store");
                 Route::put("/{id}/update", "update");
+            });
+        });
+
+        Route::prefix("users")->group(function(){
+            Route::controller(UserController::class)->group(function(){
+                Route::get("/", "index");
             });
         });
     });
