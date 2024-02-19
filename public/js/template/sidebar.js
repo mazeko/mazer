@@ -1,7 +1,8 @@
 import '../axios.min.js'
-import { appKey, bearerToken } from "../pages/app.js";
+import { handleError } from '../function.js';
+import { headers } from "../pages/app.js";
 
-sidebar = document.getElementById("sidebar")
+const sidebar = document.getElementById("sidebar")
 sidebar.dataset.status = "open"
 document.getElementById("hamburger").addEventListener('click',function() {
     if(sidebar.dataset.status == "open"){
@@ -26,6 +27,7 @@ function createMenuItem(item) {
     menuLink.id = item.menu_id;
     if(item.submenu.length === 0){
         menuLink.href = item.menu_link;
+        menuList.dataset.url = item.menu_link
     }
 
     menuLink.appendChild(menuIcon);
@@ -49,6 +51,7 @@ function showSubMenu(menuId, submenu) {
 
         submenu.classList.add("submenu-item");
         submenuLink.classList.add("submenu-link");
+        submenu.dataset.url = submenuItem.submenu_link;
         submenuLink.href = submenuItem.submenu_link;
         submenuLink.textContent = submenuItem.submenu_title;
 
@@ -73,13 +76,26 @@ function toggleSubMenu(menuId) {
     }
 }
 
-axios.get('/api/v1/menu/access', {
-    headers: { 
-        "MEZER-KEY" : appKey,
-        "Authorization": `Bearer ${bearerToken}` 
+function activateMenu() {
+    const urlPath = window.location.pathname;
+    const sidebarMenu = document.getElementById("sidebar-menu");
+    const subElement = sidebarMenu.querySelector(`[data-url="${urlPath}"]`);
+
+    if (subElement) {
+        subElement.classList.add("active");
+        const parentSub = subElement.parentElement;
+        const parentMenu = parentSub.parentElement;
+        parentSub.classList.add("active");
+        parentSub.classList.add("submenu-open");
+        parentMenu.classList.add("active");
+    } else {
+        console.log("Element not found.");
     }
-})
-.then(response => {
+}
+
+axios.get('/api/v1/menu/access', {
+    headers: headers
+}).then(response => {
     const sidebarMenu = document.getElementById("sidebar-menu");
 
     response.data.data.forEach(item => {
@@ -93,7 +109,8 @@ axios.get('/api/v1/menu/access', {
 
         sidebarMenu.appendChild(menuList);
     });
-})
-.catch(error => {
-    console.error('Error: ', error);
+
+    activateMenu();
+}).catch(error => {
+    handleError(error)
 });

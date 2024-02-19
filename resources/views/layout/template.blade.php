@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app-dark.css') }}">
 </head>
+<style>
+    html{
+        visibility: hidden;
+    }
+</style>
 <body>
     <script src="{{ asset('static/js/initTheme.js') }}"></script>
     <div id="app">
@@ -28,6 +33,7 @@
     <script src="{{ asset('static/js/components/dark.js') }}"></script>
     <script src="{{ asset('extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/sweetalert2@11.js') }}"></script>
     @stack('custom-script')
 </body>
 </html>
