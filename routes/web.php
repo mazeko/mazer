@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\WEB\DashboardController;
+use App\Http\Controllers\WEB\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,10 @@ Route::get("/", function(){
 Route::prefix("main")->group(function(){
     Route::controller(DashboardController::class)->group(function(){
         Route::get("dashboard","index");
+    });
+
+    Route::controller(UserController::class)->group(function(){
+        Route::get("users","index");
     });
 });
 
